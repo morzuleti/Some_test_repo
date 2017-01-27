@@ -32,14 +32,31 @@ namespace Animated_bees
             locations.Add("Выход", new Point(194, 213));
         
         }
-        public void AddBee(Random random)
+        private  void AddBee(Random random)
         { 
         //if (beeCount<maxBeesVal)&(Honey>minHoneyToCreateBees) {};//Сделать пчелу
-        
+            beeCount++;
+            int x = random.Next(50) - 25;
+            int y = random.Next(50) - 25;
+            Point startPoint = new Point(locations["Питомник"].X + x, locations["Питомник"].Y + y);
+            Bee bee = new Bee(beeCount, startPoint);
+           // свзять пчел наружу через делегат?
         }
-        public bool AddHoney(double nectar) { return true; }
-        public bool ConsumeHoney(double amount) { return true; }
-        public void Go() { }
+        public bool AddHoney(double nectar) 
+        { 
+            if (nectar * kCreatingHoney + Honey < maxHoney) 
+        { Honey += nectar * kCreatingHoney; return true; } 
+            else return false; 
+        }
+        public bool ConsumeHoney(double amount) 
+        { 
+            if (Honey > amount) { Honey -= amount; return true; }
+             else  return false;  
+        }
+        public void Go(Random random) 
+        {
+            if ((Honey > minHoneyToCreateBees) && (random.Next(10)==1)) AddBee (random);
+        }
         public Hive()
         {
             Random random=new Random ();
