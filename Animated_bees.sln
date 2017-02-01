@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animated_bees", "Animated_bees\Animated_bees.csproj", "{E06890CF-5018-4783-BED5-77003E250B9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E06890CF-5018-4783-BED5-77003E250B9B}.Debug|x86.ActiveCfg = Debug|x86
+		{E06890CF-5018-4783-BED5-77003E250B9B}.Debug|x86.Build.0 = Debug|x86
+		{E06890CF-5018-4783-BED5-77003E250B9B}.Release|x86.ActiveCfg = Release|x86
+		{E06890CF-5018-4783-BED5-77003E250B9B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
